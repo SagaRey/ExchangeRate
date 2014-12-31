@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">汇率</string>
+    <string name="title_section1">汇率查询</string>
+    <string name="title_section2">汇率换算</string>
+    <string name="title_section3">关于</string>
+    <string name="navigation_drawer_open">打开选项卡</string>
+    <string name="navigation_drawer_close">关闭选项卡</string>
+    <string name="action_settings">设置</string>
+    <string name="title_activity_settings">汇率设置</string>
+    <string name="update_exchange_rate">更新</string>
+    <string name="init_exchange_rate">初始</string>
+    <string name="last_update">汇率更新日期</string>
+    <string name="default_date">2014-12-25</string>
+    <string name="default_usd">612.13</string>
+    <string name="default_jpy">5.11</string>
+    <string name="default_gbp">955.11</string>
+    <string name="default_eur">748.24</string>
+    <string name="default_hkd">78.87</string>
+    <string name="default_currency">美元</string>
+    <string name="date">日期</string>
+    <string name="usd">美元</string>
+    <string name="jpy">日元</string>
+    <string name="gbp">英镑</string>
+    <string name="eur">欧元</string>
+    <string name="hkd">港币</string>
+    <string name="cny">人民币</string>
+    <string name="currency">货币</string>
+    <string name="initialization">初始化</string>
+    <string name="url">http://data.bank.hexun.com/ll/rmbhl.aspx</string>
+    <string name="title">人民币汇率中间价</string>
+    <string name="tip">数据获取于和讯网</string>
+    <string name="zero">0</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="delete">←</string>
+    <string name="clear">C</string>
+    <string name="dot">.</string>
+    <string name="name">Exchange Rate</string>
+    <string name="version">version 1.0</string>
+    <string name="author">IScream</string>
+</resources>

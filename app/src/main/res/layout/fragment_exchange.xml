@@ -1,0 +1,382 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="me.iscream.exchangerate.ExchangeFragment"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center">
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="?android:listDivider" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_horizontal">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0dp">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/cny"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:gravity="center_vertical"
+                    android:id="@+id/input" />
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/background_material_dark" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:src="@drawable/exchange"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="match_parent">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/background_material_dark" />
+
+                <TextView
+                    android:text="0.0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:gravity="right|center_vertical"
+                    android:id="@+id/output" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0dp">
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="match_parent" />
+
+                    <ImageView
+                        android:id="@+id/currencyImg"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/usd"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="?android:listDivider" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_gravity="center_horizontal">
+            <View
+                android:layout_width="1px"
+                android:layout_height="fill_parent"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical">
+
+                <Button
+                    android:id="@+id/clear"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/clear"
+                    android:background="#ffebebeb" />
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="?android:attr/listDivider" />
+
+                <RadioGroup
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:id="@+id/currencyList" >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/usd"
+                        android:id="@+id/usdRadio"
+                        android:checked="true" />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/jpy"
+                        android:id="@+id/jpyRadio" />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/gbp"
+                        android:id="@+id/gbpRadio" />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/eur"
+                        android:id="@+id/eurRadio" />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/hkd"
+                        android:id="@+id/hkdRadio" />
+                </RadioGroup>
+            </LinearLayout>
+            <View
+                android:layout_width="1px"
+                android:layout_height="fill_parent"
+                android:background="?android:attr/listDivider" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical">
+
+                <Button
+                    android:id="@+id/one"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/one"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:background="#ffebebeb" />
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="?android:attr/listDivider" />
+
+                <Button
+                    android:id="@+id/four"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/four"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:background="#ffebebeb" />
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="?android:attr/listDivider" />
+
+                <Button
+                    android:id="@+id/seven"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/seven"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:background="#ffebebeb" />
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="?android:attr/listDivider" />
+
+                <Button
+                    android:id="@+id/dot"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/dot"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:background="#ffebebeb" />
+            </LinearLayout>
+            <View
+                android:layout_width="1px"
+                android:layout_height="fill_parent"
+                android:background="?android:attr/listDivider" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical">
+
+                <Button
+                    android:id="@+id/two"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/two"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:background="#ffebebeb" />
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="?android:attr/listDivider" />
+
+                <Button
+                    android:id="@+id/five"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/five"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:background="#ffebebeb" />
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="?android:attr/listDivider" />
+
+                <Button
+                    android:id="@+id/eight"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/eight"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:background="#ffebebeb" />
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="?android:attr/listDivider" />
+
+                <Button
+                    android:id="@+id/zero"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/zero"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:background="#ffebebeb" />
+
+            </LinearLayout>
+            <View
+                android:layout_width="1px"
+                android:layout_height="fill_parent"
+                android:background="?android:attr/listDivider" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical">
+
+                <Button
+                    android:id="@+id/three"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/three"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:background="#ffebebeb" />
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="?android:attr/listDivider" />
+
+                <Button
+                    android:id="@+id/six"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/six"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:background="#ffebebeb" />
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="?android:attr/listDivider" />
+
+                <Button
+                    android:id="@+id/nine"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/nine"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:background="#ffebebeb" />
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="?android:attr/listDivider" />
+
+                <Button
+                    android:id="@+id/delete"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/delete"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:background="#ffebebeb" />
+
+            </LinearLayout>
+            <View
+                android:layout_width="1px"
+                android:layout_height="fill_parent"
+                android:background="?android:attr/listDivider" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
