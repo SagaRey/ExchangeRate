@@ -41,7 +41,8 @@ public class SettingsActivity extends ActionBarActivity {
 
     public void updateExchangeRate(View view) {
         //获取汇率
-        new Thread(){
+        view.findViewById(R.id.update_exchange_rate).setEnabled(false);
+        Thread thread = new Thread(){
             @Override
             public void run(){
                 try {
@@ -63,13 +64,16 @@ public class SettingsActivity extends ActionBarActivity {
                     e.printStackTrace();
                 }
             }
-        }.start();
+        };
+        thread.start();
         try {
-            Thread.sleep(10000);
+            thread.join();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         updateDate();
+        view.findViewById(R.id.update_exchange_rate).setEnabled(true);
+//        System.out.println("===update date===");
     }
 
     public void initExchangeRate(View view) {
